@@ -1,23 +1,38 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   ft_memset.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: nakebli <nakebli@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/06 18:22:33 by nakebli           #+#    #+#             */
-/*   Updated: 2022/10/08 03:55:06 by nakebli          ###   ########.fr       */
+/*   Created: 2022/10/08 04:26:43 by nakebli           #+#    #+#             */
+/*   Updated: 2022/10/08 04:39:09 by nakebli          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t ft_strlen(char *str)
+void *ft_memset(void *ptr, int x, size_t n)
 {
-    size_t i;
+    int i;
+    char *str;
 
+    str = ptr;
     i = 0;
-    while (str[i])
+    while (i < (int)n)
+    {
+        str[i] = x;
         i++;
-    return (i);
+    }
+    return (str);
 }
+
+
+/*int main()
+{
+    char str[50] = "GeeksForGeeks is for programming geeks.";
+    printf("\nBefore memset(): %s\n", str);
+    ft_memset(str + 13, '.', 8*sizeof(char));
+    printf("After memset():  %s", str);
+    return 0;
+}*/

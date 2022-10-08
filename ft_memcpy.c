@@ -1,23 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   ft_memcpy.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: nakebli <nakebli@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/06 18:22:33 by nakebli           #+#    #+#             */
-/*   Updated: 2022/10/08 03:55:06 by nakebli          ###   ########.fr       */
+/*   Created: 2022/10/08 04:45:33 by nakebli           #+#    #+#             */
+/*   Updated: 2022/10/08 04:46:45 by nakebli          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t ft_strlen(char *str)
+void * ft_memcpy(void *to, const void *from, size_t numBytes)
 {
-    size_t i;
-
-    i = 0;
-    while (str[i])
-        i++;
-    return (i);
+    
 }
