@@ -6,13 +6,13 @@
 /*   By: nakebli <nakebli@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/06 20:38:09 by nakebli           #+#    #+#             */
-/*   Updated: 2022/10/08 01:03:23 by nakebli          ###   ########.fr       */
+/*   Updated: 2022/10/10 10:40:07 by nakebli          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t strlcpy( char *dst,const char *src,size_t size )
+size_t ft_strlcpy( char *dst,const char *src,size_t size )
 {
     size_t i;
 
@@ -29,16 +29,16 @@ size_t strlcpy( char *dst,const char *src,size_t size )
         dst[i] = '\0';
         
     }
-    return (ft_strlen(src));
+    return (ft_strlen((char *)src));
 }
 
-int main ()
-{
-    char s1[10] = "hello";
-    char s2[10] = "ba";
+// int main ()
+// {
+//     char s1[10] = "hello wor";
+//     char s2[20] = "kkkkkkkkkkkkk";
     
-    size_t b = strlcpy(s2, s1, 2);
-    printf("s1 = %s\n" ,s1);
-    printf("s1 = %s\n" ,s2);
-    printf("b = %zu\n" ,b);
-}
+//     size_t b = ft_strlcpy(s2, s1, 20);
+//     printf("s1 = %s\n" ,s1);
+//     printf("s2 = %s\n" ,s2);
+//     printf("b = %zu\n" ,b);
+// }

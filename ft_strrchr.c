@@ -1,27 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_bzero.c                                         :+:      :+:    :+:   */
+/*   ft_strrchr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: nakebli <nakebli@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/08 04:10:04 by nakebli           #+#    #+#             */
-/*   Updated: 2022/10/10 10:41:28 by nakebli          ###   ########.fr       */
+/*   Created: 2022/10/10 10:05:21 by nakebli           #+#    #+#             */
+/*   Updated: 2022/10/10 10:59:00 by nakebli          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void ft_bzero(void *s, size_t n)
+char *strrchr(const char *str, int c)
 {
-	ft_memset(s, 0, n);
+    int n = ft_strlen(str);
+    while (n)
+    {
+        if (*(str + n) == c)
+            return (str);
+        n--;
+    }
+    return (NULL);
 }
 
-// int main()
-// {
-//     char str[50] = "GeeksForGeeks is for programming geeks.";
-//     printf("\nBefore memset(): %s\n", str);
-//     ft_bzero(str + 13, 8*sizeof(char));
-//     printf("After memset():  %s", str);
-//     return 0;
-// }
+int main ()
+{
+    int c = '\0';
+    const char str[10] = "123456789";
+    
+    printf("%s",ft_strchr(str, c));
+}

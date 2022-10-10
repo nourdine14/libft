@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   tst.c                                              :+:      :+:    :+:   */
+/*   ft_memmove.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: nakebli <nakebli@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/09 16:23:49 by nakebli           #+#    #+#             */
-/*   Updated: 2022/10/10 00:07:42 by nakebli          ###   ########.fr       */
+/*   Updated: 2022/10/10 10:40:57 by nakebli          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,6 +33,7 @@ void * ft_memmove( void * dest, const void * src, size_t n )
             d[i] = s[i];
             i++;
         }
+        d[i] = '\0';
     }
     else
     {
@@ -46,11 +47,11 @@ void * ft_memmove( void * dest, const void * src, size_t n )
     return (d);
 }
 
-int main ()
-{
-    char d[10] = "hellohi";
+// int main ()
+// {
+//     char d[10] = "111222";
     
-    char * k = ft_memmove(d + 2, d, 3);
-    printf("%s",k);
-    return 0;
-}
+//     char * k = ft_memmove(d, d + 2, 4);
+//     printf("%s",k);
+//     return 0;
+// }

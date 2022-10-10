@@ -1,27 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_bzero.c                                         :+:      :+:    :+:   */
+/*   ft_strncmp.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: nakebli <nakebli@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/08 04:10:04 by nakebli           #+#    #+#             */
-/*   Updated: 2022/10/10 10:41:28 by nakebli          ###   ########.fr       */
+/*   Created: 2022/10/10 10:25:37 by nakebli           #+#    #+#             */
+/*   Updated: 2022/10/10 10:39:44 by nakebli          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void ft_bzero(void *s, size_t n)
+int ft_strncmp ( const char * s1, const char * s2, size_t n)
 {
-	ft_memset(s, 0, n);
+    int i;
+
+    i = 0;
+    while (s1[i] && s2[i] && s1[i] == s2[i] && i < (int)(n - 1))
+        i++;
+    return (s1[i] - s2 [i]);
 }
 
-// int main()
+// int main ()
 // {
-//     char str[50] = "GeeksForGeeks is for programming geeks.";
-//     printf("\nBefore memset(): %s\n", str);
-//     ft_bzero(str + 13, 8*sizeof(char));
-//     printf("After memset():  %s", str);
-//     return 0;
+//     char s1[10] = "hello";
+//     char s2[10] = "hel";
+
+//     printf("%d",ft_strncmp(s1,s2,4));
 // }

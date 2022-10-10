@@ -1,27 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_bzero.c                                         :+:      :+:    :+:   */
+/*   ft_toupper.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: nakebli <nakebli@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/08 04:10:04 by nakebli           #+#    #+#             */
-/*   Updated: 2022/10/10 10:41:28 by nakebli          ###   ########.fr       */
+/*   Created: 2022/10/10 08:53:18 by nakebli           #+#    #+#             */
+/*   Updated: 2022/10/10 09:20:29 by nakebli          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void ft_bzero(void *s, size_t n)
+int ft_toupper( int character )
 {
-	ft_memset(s, 0, n);
+    if (character >= 'a' && character <= 'z')
+        character = character - 32;
+    return (character);
 }
 
-// int main()
+// int main ()
 // {
-//     char str[50] = "GeeksForGeeks is for programming geeks.";
-//     printf("\nBefore memset(): %s\n", str);
-//     ft_bzero(str + 13, 8*sizeof(char));
-//     printf("After memset():  %s", str);
-//     return 0;
+//     int a = 105;
+//     char c = (char)toupper(a);
+//     printf("%c",c);
 // }
