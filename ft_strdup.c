@@ -1,35 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memset.c                                        :+:      :+:    :+:   */
+/*   ft_strdup.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: nakebli <nakebli@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/08 04:26:43 by nakebli           #+#    #+#             */
-/*   Updated: 2022/10/11 05:45:03 by nakebli          ###   ########.fr       */
+/*   Created: 2022/10/11 09:57:56 by nakebli           #+#    #+#             */
+/*   Updated: 2022/10/11 10:04:49 by nakebli          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void *ft_memset(void *ptr, int x, size_t n)
+char    *ft_strdup(const char *s1)
 {
-    char *str;
-
-    str = ptr;
-    while (n--)
-    {
-        *str++ = (unsigned char)x;
-    }
-    return (str);
-}
-
-
-int main()
-{
-    char str[50] = "GeeksForGeeks is for programming geeks.";
-    printf("\nBefore memset(): %s\n", str);
-    ft_memset(str + 13, '0', 8*sizeof(char));
-    printf("After memset():  %s", str);
-    return 0;
+	char *s2;
+	int i;
+	
+	s2 = malloc(sizeof(char) * (ft_strlen(s1) + 1));
+	if (!s2)
+		return (NULL);
+	i = -1;
+	while (s1[++i])
+	{
+		s2[i] = s1[i];
+	}
+	s2[i] = '\0';
+	return (s2);
 }

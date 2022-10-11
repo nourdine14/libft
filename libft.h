@@ -6,7 +6,7 @@
 /*   By: nakebli <nakebli@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/06 20:39:47 by nakebli           #+#    #+#             */
-/*   Updated: 2022/10/10 09:17:49 by nakebli          ###   ########.fr       */
+/*   Updated: 2022/10/11 09:49:57 by nakebli          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,5 +28,5 @@ size_t ft_strlen(char *str);
 void *ft_memset(void *ptr, int x, size_t n);
 void * ft_memcpy(void *to, const void *from, size_t numBytes);
 size_t ft_strlcpy( char *dst,const char *src,size_t size );
-
+void ft_bzero(void *s, size_t n);
 #endif

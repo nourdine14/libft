@@ -1,35 +1,39 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memset.c                                        :+:      :+:    :+:   */
+/*   ft_memchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: nakebli <nakebli@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/08 04:26:43 by nakebli           #+#    #+#             */
-/*   Updated: 2022/10/11 05:45:03 by nakebli          ###   ########.fr       */
+/*   Created: 2022/10/11 02:48:14 by nakebli           #+#    #+#             */
+/*   Updated: 2022/10/11 03:57:12 by nakebli          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void *ft_memset(void *ptr, int x, size_t n)
+void *ft_memchr(const void *s, int c, size_t n)
 {
-    char *str;
+    unsigned char *str;
 
-    str = ptr;
-    while (n--)
+    str = (unsigned char *)s;
+    while (*str && n)
     {
-        *str++ = (unsigned char)x;
+        if (*str == (unsigned char)c)
+        {
+            return (str);
+        }
+        str++;
+        n--;
     }
-    return (str);
+    return (NULL);
 }
 
-
-int main()
-{
-    char str[50] = "GeeksForGeeks is for programming geeks.";
-    printf("\nBefore memset(): %s\n", str);
-    ft_memset(str + 13, '0', 8*sizeof(char));
-    printf("After memset():  %s", str);
-    return 0;
-}
+// int main ()
+// {
+//     char *s = "hello Asi";
+//     char a = 'A';
+    
+//     printf("%s",ft_memchr(s, a, 5));
+//     return (0);
+// }

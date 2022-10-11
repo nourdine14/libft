@@ -1,35 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memset.c                                        :+:      :+:    :+:   */
+/*   ft_calloc.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: nakebli <nakebli@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/08 04:26:43 by nakebli           #+#    #+#             */
-/*   Updated: 2022/10/11 05:45:03 by nakebli          ###   ########.fr       */
+/*   Created: 2022/10/11 09:44:37 by nakebli           #+#    #+#             */
+/*   Updated: 2022/10/11 09:53:08 by nakebli          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void *ft_memset(void *ptr, int x, size_t n)
+void * calloc(size_t count, size_t size)
 {
-    char *str;
-
-    str = ptr;
-    while (n--)
-    {
-        *str++ = (unsigned char)x;
-    }
-    return (str);
-}
-
-
-int main()
-{
-    char str[50] = "GeeksForGeeks is for programming geeks.";
-    printf("\nBefore memset(): %s\n", str);
-    ft_memset(str + 13, '0', 8*sizeof(char));
-    printf("After memset():  %s", str);
-    return 0;
+    void *p;
+    p = malloc(count * size);
+    if (!p)
+        return (NULL);
+    ft_bzero(p,count * size);
+    return (p);
 }
