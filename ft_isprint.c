@@ -6,13 +6,15 @@
 /*   By: nakebli <nakebli@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/06 14:22:03 by nakebli           #+#    #+#             */
-/*   Updated: 2022/10/06 18:21:40 by nakebli          ###   ########.fr       */
+/*   Updated: 2022/10/12 17:04:24 by nakebli          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int ft_isprint( int arg )
+#include "libft.h"
+
+int ft_isprint(int c)
 {
-    if (arg >= 33 && arg <= 126)
+    if (c >= 32 && c <= 126)
 		return (1);
 	return (0);
 }

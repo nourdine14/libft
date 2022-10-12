@@ -6,7 +6,7 @@
 /*   By: nakebli <nakebli@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/09 16:23:49 by nakebli           #+#    #+#             */
-/*   Updated: 2022/10/10 10:40:57 by nakebli          ###   ########.fr       */
+/*   Updated: 2022/10/12 17:55:57 by nakebli          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,13 +22,13 @@ void * ft_memmove( void * dest, const void * src, size_t n )
     s = (char *)src;
     i = 0;
     
-    if (s == d)
+    if (s == d || !n)
     {
-        return (s);
+        return (d);
     }
     else if (s > d)
     {
-        while (s[i] && i < (int)n)
+        while (i < (int)n)
         {
             d[i] = s[i];
             i++;

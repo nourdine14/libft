@@ -6,7 +6,7 @@
 /*   By: nakebli <nakebli@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/10 10:42:37 by nakebli           #+#    #+#             */
-/*   Updated: 2022/10/11 03:52:12 by nakebli          ###   ########.fr       */
+/*   Updated: 2022/10/12 18:52:36 by nakebli          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,15 +18,16 @@ char * ft_strnstr(const char *big, const char *little, size_t len)
 	int j;
 
 	i = 0;
-
-	while (big[i])
+	if(!(*little))
+		return ((char *)big);
+	while (big[i] && i < (int)len)
 	{
-		j = 0;
 		if(*(big + i) == *(little))
 		{
+			j = 0;
 			while (*(big + i + j) == *(little + j))
 			{
-				if (!*(little + j) && i + (int)ft_strlen((char *)little) - j <= (int)len - 1)
+				if (!*(little + j) && i + (int)ft_strlen((char *)little) - j < (int)len - 1)
 					return ((char *)(big + i));
 				j++;
 			}
@@ -67,10 +68,10 @@ char * ft_strnstr(const char *big, const char *little, size_t len)
 // 	return (0);
 // }
 
-int main ()
-{
-	char s1[] = "abcdefghijklmn";
-	char *s2 = "ghi";
-	
-	printf("%s",ft_strnstr(s1, s2, 8));
-}
+// int main ()
+// {
+// 	char s1[] = "abcdef";
+// 	char *s2 = "";
+
+// 	printf("%s",ft_strnstr(s1, s2, 0));
+// }

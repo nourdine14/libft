@@ -6,7 +6,7 @@
 /*   By: nakebli <nakebli@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/08 04:45:33 by nakebli           #+#    #+#             */
-/*   Updated: 2022/10/10 10:41:10 by nakebli          ###   ########.fr       */
+/*   Updated: 2022/10/12 16:33:36 by nakebli          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,8 @@ void *  ft_memcpy(void *dest, const void *src, size_t n)
 
     d = dest;
     s = (char *)src;
+    if (!d && !s)
+        return (NULL);
     i = 0;
     while (i < (int)n)
     {
@@ -31,9 +33,9 @@ void *  ft_memcpy(void *dest, const void *src, size_t n)
 
 // int main ()
 // {
-//     char s[10] = "hello";
-//     char d[10];
+//     // char s[10] = "hello";
+//     // char d[10];
 
-//     char * k = memcpy(d, s, 3);
+//     char * k = ft_memcpy(NULL, NULL, 3);
 //     printf("%s",k);
 // }

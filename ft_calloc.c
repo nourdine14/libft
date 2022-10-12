@@ -6,13 +6,13 @@
 /*   By: nakebli <nakebli@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/11 09:44:37 by nakebli           #+#    #+#             */
-/*   Updated: 2022/10/11 09:53:08 by nakebli          ###   ########.fr       */
+/*   Updated: 2022/10/11 22:39:35 by nakebli          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void * calloc(size_t count, size_t size)
+void * ft_calloc(size_t count, size_t size)
 {
     void *p;
     p = malloc(count * size);
