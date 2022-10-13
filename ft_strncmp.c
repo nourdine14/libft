@@ -6,7 +6,7 @@
 /*   By: nakebli <nakebli@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/10 10:25:37 by nakebli           #+#    #+#             */
-/*   Updated: 2022/10/10 10:39:44 by nakebli          ###   ########.fr       */
+/*   Updated: 2022/10/13 19:01:19 by nakebli          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ int ft_strncmp ( const char * s1, const char * s2, size_t n)
     i = 0;
     while (s1[i] && s2[i] && s1[i] == s2[i] && i < (int)(n - 1))
         i++;
-    return (s1[i] - s2 [i]);
+    return ((unsigned char )s1[i] - (unsigned char)s2 [i]);
 }
 
 // int main ()

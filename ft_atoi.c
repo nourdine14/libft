@@ -6,7 +6,7 @@
 /*   By: nakebli <nakebli@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/11 07:50:00 by nakebli           #+#    #+#             */
-/*   Updated: 2022/10/11 09:14:20 by nakebli          ###   ########.fr       */
+/*   Updated: 2022/10/13 19:29:02 by nakebli          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,10 +21,16 @@ int ft_atoi(const char *str)
     signe = 1;
     value = 0;
     i = 0;
-    while (str[i] == ' ')
+    while (str[i] == ' ' || str[i] == '\t' || str[i] == '\v' || str[i] == '\f'
+    || str[i] == '\r' || str[i] == '\n' || str[i] == '\f')
         i++;
-    if(str[i++] == '-')
+    if(str[i] == '-')
+    {
         signe = -1;
+        i++;
+    }
+    else if (str[i] == '+')
+        i++;
     while (str[i] <= '9' && str[i] >= '0')
     {
         value = value * 10 + (str[i] - 48);
@@ -33,11 +39,10 @@ int ft_atoi(const char *str)
     return (signe * value);
 }
 
-// int main ()
-// {
-//     char * str;
-//     int i;
-//     str = "        -12k458";
-//     i = ft_atoi(str);
-//     printf("%d",i);
-// }
+int main ()
+{
+    int i;
+    char	*n = "945";
+    i = ft_atoi(n);
+    printf("%d",i);
+}

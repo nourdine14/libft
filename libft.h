@@ -6,7 +6,7 @@
 /*   By: nakebli <nakebli@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/06 20:39:47 by nakebli           #+#    #+#             */
-/*   Updated: 2022/10/12 10:25:24 by nakebli          ###   ########.fr       */
+/*   Updated: 2022/10/13 18:27:49 by nakebli          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,7 @@ void ft_bzero(void *s, size_t n);
 void * ft_memcpy(void *to, const void *from, size_t numBytes);
 void * ft_memmove( void * dest, const void * src, size_t n );
 size_t ft_strlcpy( char *dst,const char *src,size_t size );
-size_t ft_strlcat(char *dest, char *src, size_t dstsize);
+size_t ft_strlcat(char *dst, char *src, size_t size);
 int ft_toupper( int character );
 int ft_tolower( int character );
 char *ft_strchr(const char *str, int c);

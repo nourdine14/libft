@@ -6,7 +6,7 @@
 /*   By: nakebli <nakebli@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/11 09:44:37 by nakebli           #+#    #+#             */
-/*   Updated: 2022/10/11 22:39:35 by nakebli          ###   ########.fr       */
+/*   Updated: 2022/10/13 14:33:15 by nakebli          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,10 +14,10 @@
 
 void * ft_calloc(size_t count, size_t size)
 {
-    void *p;
-    p = malloc(count * size);
-    if (!p)
-        return (NULL);
-    ft_bzero(p,count * size);
-    return (p);
+	void *p;
+	p = malloc(count * size);
+	if (!p)
+		return (NULL);
+	ft_bzero(p,count * size);
+	return (p);
 }

@@ -6,72 +6,47 @@
 /*   By: nakebli <nakebli@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/10 10:42:37 by nakebli           #+#    #+#             */
-/*   Updated: 2022/10/12 18:52:36 by nakebli          ###   ########.fr       */
+/*   Updated: 2022/10/13 16:36:54 by nakebli          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char * ft_strnstr(const char *big, const char *little, size_t len)
+char	*ft_strnstr(const char *big, const char *little, size_t len)
 {
-	int i;
-	int j;
+	size_t	i;
+	int		j;
+	char	*pt;
 
 	i = 0;
-	if(!(*little))
+	pt = 0;
+	if (little[i] == '\0')
 		return ((char *)big);
-	while (big[i] && i < (int)len)
+	while (big[i] != '\0' && i < len)
 	{
-		if(*(big + i) == *(little))
+		if (big[i] == little[0])
 		{
+			pt = (char *)big + i;
 			j = 0;
-			while (*(big + i + j) == *(little + j))
+			while (big[i + j] == little[j] && i + j < len)
 			{
-				if (!*(little + j) && i + (int)ft_strlen((char *)little) - j < (int)len - 1)
-					return ((char *)(big + i));
+				if (!little[j + 1])
+					return (pt);
 				j++;
 			}
+			pt = 0;
 		}
 		i++;
 	}
 	return (NULL);
 }
 
-// #include"libft.h"
-
-// char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
-// {
-// 	size_t	i;
-// 	size_t	j;
-// 	size_t	found;
-
-// 	i = 0;
-// 	if (!*needle)
-// 		return ((char *)haystack);
-// 	while (haystack[i] && i < len)
-// 	{
-// 		if (haystack[i] == needle[0])
-// 		{
-// 			j = 0;
-// 			found = 1;
-// 			while (needle[j])
-// 			{
-// 				if (needle[j] != haystack[i + j] || i + j >= len)
-// 					found = 0;
-// 				j++;
-// 			}
-// 			if (found)
-// 				return ((char *) haystack + i);
-// 		}
-// 		i++;
-// 	}
-// 	return (0);
-// }
-
 // int main ()
 // {
-// 	char s1[] = "abcdef";
-// 	char *s2 = "";
+// 	// char	*s1 = "MZIRIBMZIRIBMZE123";
+// 	// char	*s2 = "MZIRIBMZE";
+// 	// size_t	max = strlen(s2);
 
-// 	printf("%s",ft_strnstr(s1, s2, 0));
+// 	printf("%s\n",ft_strnstr(NULL, "fake", 0));
+// 	printf("%s\n",strnstr(NULL, "fake", 0));
 // }

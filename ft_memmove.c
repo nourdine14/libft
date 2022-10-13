@@ -6,7 +6,7 @@
 /*   By: nakebli <nakebli@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/09 16:23:49 by nakebli           #+#    #+#             */
-/*   Updated: 2022/10/12 17:55:57 by nakebli          ###   ########.fr       */
+/*   Updated: 2022/10/13 19:52:11 by nakebli          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,6 @@ void * ft_memmove( void * dest, const void * src, size_t n )
             d[i] = s[i];
             i++;
         }
-        d[i] = '\0';
     }
     else
     {
@@ -46,6 +45,32 @@ void * ft_memmove( void * dest, const void * src, size_t n )
     }
     return (d);
 }
+
+// void	*ft_memmove(void *dest, const void *src, size_t n)
+// {
+// 	size_t	idx;
+
+// 	if (dest == src || !n)
+// 		return (dest);
+// 	idx = 0;
+// 	if (dest < src)
+// 	{
+// 		while (idx < n)
+// 		{
+// 			*((char *)dest + idx) = *((char *)src + idx);
+// 			idx++;
+// 		}
+// 	}
+// 	else
+// 	{
+// 		while (n > 0)
+// 		{
+// 			*((char *)dest + n - 1) = *((char *)src + n - 1);
+// 			n--;
+// 		}
+// 	}
+// 	return (dest);
+// }
 
 // int main ()
 // {
