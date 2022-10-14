@@ -6,7 +6,7 @@
 #    By: nakebli <nakebli@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/10/11 23:42:34 by nakebli           #+#    #+#              #
-#    Updated: 2022/10/12 16:49:41 by nakebli          ###   ########.fr        #
+#    Updated: 2022/10/14 02:26:01 by nakebli          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -34,7 +34,9 @@ SRCS =	ft_isalpha.c \
 	ft_strnstr.c \
 	ft_atoi.c \
 	ft_calloc.c \
-	ft_strdup.c 
+	ft_strdup.c \
+	ft_substr.c \
+	ft_strjoin.c
 
 OBJS = $(SRCS:.c=.o)
 
@@ -60,3 +62,4 @@ fclean:clean
 	$(RM) $(NAME)
 
 re: fclean all
+#.phony ;

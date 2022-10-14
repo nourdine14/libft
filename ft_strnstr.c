@@ -6,7 +6,7 @@
 /*   By: nakebli <nakebli@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/10 10:42:37 by nakebli           #+#    #+#             */
-/*   Updated: 2022/10/13 16:36:54 by nakebli          ###   ########.fr       */
+/*   Updated: 2022/10/13 21:50:32 by nakebli          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ char	*ft_strnstr(const char *big, const char *little, size_t len)
 	pt = 0;
 	if (little[i] == '\0')
 		return ((char *)big);
-	while (big[i] != '\0' && i < len)
+	while (len && big[i] != '\0' && i < len)
 	{
 		if (big[i] == little[0])
 		{
