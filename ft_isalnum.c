@@ -6,13 +6,15 @@
 /*   By: nakebli <nakebli@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/06 12:06:01 by nakebli           #+#    #+#             */
-/*   Updated: 2022/10/07 23:39:35 by nakebli          ###   ########.fr       */
+/*   Updated: 2022/10/16 23:17:18 by nakebli          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 int	ft_isalnum(int arg)
 {
-	if ((arg >= '0' && arg <= '9') || (arg >= 'a' && arg <= 'z') || (arg >= 'A' && arg <= 'Z'))
+	if ((arg >= '0' && arg <= '9')
+		|| (arg >= 'a' && arg <= 'z')
+		|| (arg >= 'A' && arg <= 'Z'))
 		return (1);
 	return (0);
 }

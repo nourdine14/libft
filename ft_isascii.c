@@ -6,15 +6,15 @@
 /*   By: nakebli <nakebli@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/06 12:15:32 by nakebli           #+#    #+#             */
-/*   Updated: 2022/10/12 10:20:54 by nakebli          ###   ########.fr       */
+/*   Updated: 2022/10/16 23:19:59 by nakebli          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-
 #include "libft.h"
-int ft_isascii(int arg)
+
+int	ft_isascii(int arg)
 {
-    if (arg >= 0 && arg <= 127)
+	if (arg >= 0 && arg <= 127)
 		return (1);
 	return (0);
 }

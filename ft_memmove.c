@@ -6,44 +6,40 @@
 /*   By: nakebli <nakebli@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/09 16:23:49 by nakebli           #+#    #+#             */
-/*   Updated: 2022/10/13 19:52:11 by nakebli          ###   ########.fr       */
+/*   Updated: 2022/10/16 23:49:27 by nakebli          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void * ft_memmove( void * dest, const void * src, size_t n )
+void	*ft_memmove( void *dest, const void *src, size_t n)
 {
-    int i;
-    char *d;
-    char *s;
+	int		i;
+	char	*d;
+	char	*s;
 
-    d = dest;
-    s = (char *)src;
-    i = 0;
-    
-    if (s == d || !n)
-    {
-        return (d);
-    }
-    else if (s > d)
-    {
-        while (i < (int)n)
-        {
-            d[i] = s[i];
-            i++;
-        }
-    }
-    else
-    {
-        i = 0;
-        while (i <= (int)(n - 1))
-        {
-            d[n - 1 - i] = s[n - 1 - i];
-            i++;
-        }
-    }
-    return (d);
+	d = dest;
+	s = (char *)src;
+	i = 0;
+	if (s == d || !n)
+		return (d);
+	else if (s > d)
+	{
+		while (i < (int)n)
+		{
+			d[i] = s[i];
+			i++;
+		}
+	}
+	else
+	{
+		while (i <= (int)(n - 1))
+		{
+			d[n - 1 - i] = s[n - 1 - i];
+			i++;
+		}
+	}
+	return (d);
 }
 
 // void	*ft_memmove(void *dest, const void *src, size_t n)
@@ -75,7 +71,6 @@ void * ft_memmove( void * dest, const void * src, size_t n )
 // int main ()
 // {
 //     char d[10] = "111222";
-    
 //     char * k = ft_memmove(d, d + 2, 4);
 //     printf("%s",k);
 //     return 0;

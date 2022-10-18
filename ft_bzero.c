@@ -6,13 +6,13 @@
 /*   By: nakebli <nakebli@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/08 04:10:04 by nakebli           #+#    #+#             */
-/*   Updated: 2022/10/10 10:41:28 by nakebli          ###   ########.fr       */
+/*   Updated: 2022/10/16 23:12:49 by nakebli          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void ft_bzero(void *s, size_t n)
+void	ft_bzero(void *s, size_t n)
 {
 	ft_memset(s, 0, n);
 }

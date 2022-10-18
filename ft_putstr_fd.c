@@ -6,16 +6,16 @@
 /*   By: nakebli <nakebli@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/15 20:49:27 by nakebli           #+#    #+#             */
-/*   Updated: 2022/10/15 21:03:54 by nakebli          ###   ########.fr       */
+/*   Updated: 2022/10/16 23:55:09 by nakebli          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void ft_putstr_fd(char *s, int fd)
+void	ft_putstr_fd(char *s, int fd)
 {
-	int len;
-	// int i;
+	int	len;
+
 	if (s)
 	{
 		len = (int)ft_strlen(s);

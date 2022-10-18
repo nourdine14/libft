@@ -6,18 +6,18 @@
 /*   By: nakebli <nakebli@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/06 18:22:33 by nakebli           #+#    #+#             */
-/*   Updated: 2022/10/08 03:55:06 by nakebli          ###   ########.fr       */
+/*   Updated: 2022/10/17 00:17:25 by nakebli          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t ft_strlen(char *str)
+size_t	ft_strlen(char *str)
 {
-    size_t i;
+	size_t	i;
 
-    i = 0;
-    while (str[i])
-        i++;
-    return (i);
+	i = 0;
+	while (str[i])
+		i++;
+	return (i);
 }

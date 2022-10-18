@@ -6,17 +6,17 @@
 /*   By: nakebli <nakebli@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/10 09:24:21 by nakebli           #+#    #+#             */
-/*   Updated: 2022/10/10 09:26:35 by nakebli          ###   ########.fr       */
+/*   Updated: 2022/10/17 01:37:53 by nakebli          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int ft_tolower( int character )
+int	ft_tolower( int character )
 {
-    if (character >= 'A' && character <= 'Z')
-        character = character + 32;
-    return (character);
+	if (character >= 'A' && character <= 'Z')
+		character = character + 32;
+	return (character);
 }
 
 // int main ()

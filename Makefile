@@ -6,7 +6,7 @@
 #    By: nakebli <nakebli@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/10/11 23:42:34 by nakebli           #+#    #+#              #
-#    Updated: 2022/10/16 05:25:54 by nakebli          ###   ########.fr        #
+#    Updated: 2022/10/18 12:11:45 by nakebli          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -41,7 +41,9 @@ SRCS =	ft_isalpha.c \
 	ft_putstr_fd.c \
 	ft_putendl_fd.c \
 	ft_strtrim.c \
-	ft_putnbr_fd.c
+	ft_putnbr_fd.c \
+	ft_split.c \
+	ft_itoa.c 
 
 OBJS = $(SRCS:.c=.o)
 

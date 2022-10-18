@@ -1,36 +1,40 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strchr.c                                        :+:      :+:    :+:   */
+/*   ft_split.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: nakebli <nakebli@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/10 09:47:26 by nakebli           #+#    #+#             */
-/*   Updated: 2022/10/18 08:34:56 by nakebli          ###   ########.fr       */
+/*   Created: 2022/10/18 10:36:11 by nakebli           #+#    #+#             */
+/*   Updated: 2022/10/18 11:34:03 by nakebli          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strchr(const char *str, int c)
+char **ft_split(char const *s, char c)
 {
-	
-	if (str == NULL)
-		return (NULL);
-	while (*str)
-	{
-		if ((char)*str == (char)c)
-			return ((char *)str);
-		str++;
-	}
-	if (*str == c)
-		return ((char *)str);
-	return (NULL);
-}
+	int i;
+	int j;
+	int k;
+	char **str;
 
-// int main ()
-// {
-//     // int c = '\0';
-//     // const char str[10] = "123456789";
-//     printf("%c",'t' + 256);
-// }
+	i = 0;
+	str = 0;
+	while(s[i])
+	{
+		while(*s++ != c && s[k]);
+		str[i] = (char *)malloc(i - 1);
+		if (!str[i])
+			return (0);
+		j = 0;
+		k = 0;
+		while (s[i] != c && s[i])
+		{
+			str[i][j++] = *(s + k);
+			k++;
+		}
+		i++;
+	}
+	return (str);
+}
