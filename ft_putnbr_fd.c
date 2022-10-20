@@ -6,7 +6,7 @@
 /*   By: nakebli <nakebli@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/16 03:58:17 by nakebli           #+#    #+#             */
-/*   Updated: 2022/10/16 23:54:15 by nakebli          ###   ########.fr       */
+/*   Updated: 2022/10/19 19:06:49 by nakebli          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ void	ft_putnbr_fd(int n, int fd)
 		if (n < 0)
 		{
 			ft_putchar_fd('-', fd);
-			ft_putnbr_fd((-1 * n), fd);
+			n = -n;
 		}
 		if (n > 9)
 		{
@@ -39,6 +39,6 @@ void	ft_putnbr_fd(int n, int fd)
 
 // int main ()
 // {
-// 	int		i = -2147483648;
+// 	int		i = -42;
 // 	ft_putnbr_fd(i, 1);
 // }

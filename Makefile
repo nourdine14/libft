@@ -6,7 +6,7 @@
 #    By: nakebli <nakebli@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/10/11 23:42:34 by nakebli           #+#    #+#              #
-#    Updated: 2022/10/18 12:11:45 by nakebli          ###   ########.fr        #
+#    Updated: 2022/10/20 21:34:39 by nakebli          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -37,16 +37,24 @@ SRCS =	ft_isalpha.c \
 	ft_strdup.c \
 	ft_substr.c \
 	ft_strjoin.c \
+	ft_strtrim.c \
+	ft_split.c \
+	ft_itoa.c \
+	ft_strmapi.c \
+	ft_striteri.c \
 	ft_putchar_fd.c \
 	ft_putstr_fd.c \
 	ft_putendl_fd.c \
-	ft_strtrim.c \
 	ft_putnbr_fd.c \
-	ft_split.c \
-	ft_itoa.c 
+
+B_SRCS = ft_lstnew.c \
+	ft_lstadd_front.c \
+	ft_lstsize.c \
+	ft_lstlast.c 
 
 OBJS = $(SRCS:.c=.o)
 
+B_OBJS = $(B_SRCS:.c=.o)
 
 CFLAGS = -Wall -Werror -Wextra
 
@@ -62,8 +70,11 @@ $(NAME):$(OBJS)
 %.o: %.c
 	gcc $(CFLAGS) -c $< -o $@
 
+bonus : $(B_OBJS) $(OBJS)
+	$(AR) $(NAME) $(B_OBJS) $(OBJS)
+
 clean:
-	$(RM) $(OBJS)
+	$(RM) $(OBJS) $(B_OBJS)
 
 fclean:clean
 	$(RM) $(NAME)

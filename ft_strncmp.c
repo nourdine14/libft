@@ -6,7 +6,7 @@
 /*   By: nakebli <nakebli@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/10 10:25:37 by nakebli           #+#    #+#             */
-/*   Updated: 2022/10/18 08:57:23 by nakebli          ###   ########.fr       */
+/*   Updated: 2022/10/20 10:14:09 by nakebli          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 int	ft_strncmp(const char *s1, const char *s2, size_t n)
 {
 	int	i;
-	int size;
+	int	size;
 
 	i = 0;
 	size = n;

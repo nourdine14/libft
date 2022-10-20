@@ -6,35 +6,95 @@
 /*   By: nakebli <nakebli@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/18 10:36:11 by nakebli           #+#    #+#             */
-/*   Updated: 2022/10/18 11:34:03 by nakebli          ###   ########.fr       */
+/*   Updated: 2022/10/20 09:48:30 by nakebli          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char **ft_split(char const *s, char c)
+static int	ft_numofwords(const char *s, char c)
 {
-	int i;
-	int j;
-	int k;
-	char **str;
+	int	i;
+	int	word;
 
 	i = 0;
-	str = 0;
-	while(s[i])
+	word = 0;
+	while (s[i])
 	{
-		while(*s++ != c && s[k]);
-		str[i] = (char *)malloc(i - 1);
-		if (!str[i])
-			return (0);
-		j = 0;
-		k = 0;
-		while (s[i] != c && s[i])
-		{
-			str[i][j++] = *(s + k);
-			k++;
-		}
+		if (s[i] != c && (s[i + 1] == c || s[i + 1] == '\0'))
+			word++;
 		i++;
 	}
-	return (str);
+	return (word);
+}
+
+static int	ft_wordlen(const char *s, char c)
+{
+	int	i;
+	int	len;
+
+	i = 0;
+	len = 0;
+	while (s[i] != c && s[i] != '\0')
+	{
+		i++;
+		len++;
+	}
+	return (len);
+}
+
+void	ft_free2d(char **str)
+{
+	int	i;
+
+	i = 0;
+	while (str[i])
+	{
+		free (str[i]);
+		i++;
+	}
+	free (str);
+}
+
+static char	**fill2darr(const char *s, char c, int num, char **splitted)
+{
+	int	i;
+	int	j;
+	int	len;
+
+	i = 0;
+	while (i < num)
+	{
+		while (*s == c)
+			s++;
+		len = ft_wordlen(s, c);
+		splitted[i] = (char *)malloc(sizeof(char) * (len + 1));
+		if (splitted[i] == NULL)
+		{
+			ft_free2d(splitted);
+			return (NULL);
+		}
+		j = 0;
+		while (j < len)
+			splitted[i][j++] = *s++;
+		splitted[i][j] = '\0';
+		i++;
+	}
+	splitted[i] = NULL;
+	return (splitted);
+}
+
+char	**ft_split(char	const *s, char c)
+{
+	int		num;
+	char	**splited;
+
+	if (s == NULL)
+		return (NULL);
+	num = ft_numofwords(s, c);
+	splited = (char **)malloc(sizeof(char *) * (num + 1));
+	if (splited == NULL)
+		return (NULL);
+	splited = fill2darr(s, c, num, splited);
+	return (splited);
 }
