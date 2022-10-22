@@ -6,7 +6,7 @@
 #    By: nakebli <nakebli@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/10/11 23:42:34 by nakebli           #+#    #+#              #
-#    Updated: 2022/10/20 21:34:39 by nakebli          ###   ########.fr        #
+#    Updated: 2022/10/21 21:31:50 by nakebli          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -50,7 +50,12 @@ SRCS =	ft_isalpha.c \
 B_SRCS = ft_lstnew.c \
 	ft_lstadd_front.c \
 	ft_lstsize.c \
-	ft_lstlast.c 
+	ft_lstlast.c \
+	ft_lstadd_back.c \
+	ft_lstdelone.c \
+	ft_lstclear.c \
+	ft_lstiter.c \
+	ft_lstmap.c
 
 OBJS = $(SRCS:.c=.o)
 
