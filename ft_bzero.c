@@ -6,7 +6,7 @@
 /*   By: nakebli <nakebli@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/08 04:10:04 by nakebli           #+#    #+#             */
-/*   Updated: 2022/10/16 23:12:49 by nakebli          ###   ########.fr       */
+/*   Updated: 2022/10/24 10:54:58 by nakebli          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,12 +16,3 @@ void	ft_bzero(void *s, size_t n)
 {
 	ft_memset(s, 0, n);
 }
-
-// int main()
-// {
-//     char str[50] = "GeeksForGeeks is for programming geeks.";
-//     printf("\nBefore memset(): %s\n", str);
-//     ft_bzero(str + 13, 8*sizeof(char));
-//     printf("After memset():  %s", str);
-//     return 0;
-// }

@@ -6,7 +6,7 @@
 /*   By: nakebli <nakebli@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/11 07:50:00 by nakebli           #+#    #+#             */
-/*   Updated: 2022/10/16 23:12:25 by nakebli          ###   ########.fr       */
+/*   Updated: 2022/10/24 10:54:49 by nakebli          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,11 +38,3 @@ int	ft_atoi(const char *str)
 	}
 	return (signe * value);
 }
-
-// int main ()
-// {
-//     int i;
-//     char	*n = "5945";
-//     i = ft_atoi(n);
-//     printf("%d",i);
-// }

@@ -6,7 +6,7 @@
 /*   By: nakebli <nakebli@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/08 04:45:33 by nakebli           #+#    #+#             */
-/*   Updated: 2022/10/16 23:33:53 by nakebli          ###   ########.fr       */
+/*   Updated: 2022/10/24 10:58:25 by nakebli          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,12 +30,3 @@ void	*ft_memcpy(void *dest, const void *src, size_t n)
 	}
 	return (d);
 }
-
-// int main ()
-// {
-//     // char s[10] = "hello";
-//     // char d[10];
-
-//     char * k = ft_memcpy(NULL, NULL, 3);
-//     printf("%s",k);
-// }

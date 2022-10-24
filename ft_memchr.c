@@ -6,7 +6,7 @@
 /*   By: nakebli <nakebli@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/11 02:48:14 by nakebli           #+#    #+#             */
-/*   Updated: 2022/10/16 23:28:58 by nakebli          ###   ########.fr       */
+/*   Updated: 2022/10/24 10:58:14 by nakebli          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,11 +28,3 @@ void	*ft_memchr(const void *s, int c, size_t n)
 	}
 	return (NULL);
 }
-
-// int main ()
-// {
-//     char *s = "hello \0 Asi";
-//     char a = '\0';	
-//     printf("%s",memchr(s, a, 5));
-//     return (0);
-// }

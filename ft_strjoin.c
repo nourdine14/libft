@@ -6,11 +6,12 @@
 /*   By: nakebli <nakebli@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/13 23:06:21 by nakebli           #+#    #+#             */
-/*   Updated: 2022/10/17 00:01:47 by nakebli          ###   ########.fr       */
+/*   Updated: 2022/10/24 11:03:13 by nakebli          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <string.h>
 
 char	*ft_strjoin(char const *s1, char const *s2)
 {
@@ -37,12 +38,3 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	js[i] = '\0';
 	return (js);
 }
-
-// int main ()
-// {
-//     char	*s1 = "my favorite animal is";
-// 	char	*s2 = " ";
-// 	char	*s3 = "the nyancat";
-
-//     printf("%s",ft_strjoin(ft_strjoin(s1, s2), s3));
-// }

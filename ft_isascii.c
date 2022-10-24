@@ -6,7 +6,7 @@
 /*   By: nakebli <nakebli@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/06 12:15:32 by nakebli           #+#    #+#             */
-/*   Updated: 2022/10/16 23:19:59 by nakebli          ###   ########.fr       */
+/*   Updated: 2022/10/24 10:55:17 by nakebli          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,8 +18,3 @@ int	ft_isascii(int arg)
 		return (1);
 	return (0);
 }
-
-// int main ()
-// {
-// 	printf("%d", ft_isascii('1'));
-// }

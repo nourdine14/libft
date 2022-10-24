@@ -6,7 +6,7 @@
 /*   By: nakebli <nakebli@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/21 21:03:28 by nakebli           #+#    #+#             */
-/*   Updated: 2022/10/21 21:21:54 by nakebli          ###   ########.fr       */
+/*   Updated: 2022/10/24 11:13:18 by nakebli          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,5 +21,5 @@ void	ft_lstiter(t_list *lst, void (*f)(void *))
 	{
 		f(temp->content);
 		temp = temp->next;
-	}
+	}	
 }

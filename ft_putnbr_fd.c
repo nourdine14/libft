@@ -6,7 +6,7 @@
 /*   By: nakebli <nakebli@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/16 03:58:17 by nakebli           #+#    #+#             */
-/*   Updated: 2022/10/19 19:06:49 by nakebli          ###   ########.fr       */
+/*   Updated: 2022/10/24 10:58:58 by nakebli          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,9 +36,3 @@ void	ft_putnbr_fd(int n, int fd)
 			ft_putchar_fd(n % 10 + '0', fd);
 	}
 }
-
-// int main ()
-// {
-// 	int		i = -42;
-// 	ft_putnbr_fd(i, 1);
-// }

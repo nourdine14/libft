@@ -5,62 +5,32 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: nakebli <nakebli@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/21 21:30:22 by nakebli           #+#    #+#             */
-/*   Updated: 2022/10/22 21:14:30 by nakebli          ###   ########.fr       */
+/*   Created: 2022/10/23 10:01:12 by nakebli           #+#    #+#             */
+/*   Updated: 2022/10/24 11:15:53 by nakebli          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-t_list  *ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
+t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 {
-	t_list *temp;
+	t_list	*temp;
+	t_list	*new;
+	t_list	*hi;
+
 	temp = lst;
-	(void) del;
-	t_list *new;
-	new = malloc(sizeof(t_list));
-	new =  NULL;
-	while (lst)
+	new = 0;
+	while (temp)
 	{
-		ft_lstadd_back(&new , ft_lstnew(f(lst->content)));
-		if(!lst->next)
-			break ;
-		lst = lst->next;
+		hi = ft_lstnew(f(temp -> content));
+		if (!hi)
+		{
+			ft_lstclear(&new, del);
+			free(hi);
+			return (new);
+		}
+		ft_lstadd_back(&new, hi);
+		temp = temp -> next;
 	}
-	while(temp)
-	{
-		free(temp);
-		(temp) = (temp)->next;
-	}
-	return(new);
-}
-
-void *ft_walo(void *cont)
-{
-	char *str;
-	str = ft_strjoin((char *)cont, " + ft_walo");
-	return(str);
-}
-
-int main ()
-{
-	t_list *lst;
-	t_list *tmp;
-	
-	lst = malloc(sizeof(t_list));
-	lst = NULL;
-
-	int i = 0 ;
-	while(i < 10)
-	{
-		ft_lstadd_back(&lst, ft_lstnew("content"));
-		i++;
-	}
-	tmp = ft_lstmap(lst , ft_walo, NULL);
-	while(tmp)
-	{
-		printf("%s\n" , (char *)tmp->content );
-		tmp = tmp->next;
-	}
-	return(0);
+	return (new);
 }

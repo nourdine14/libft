@@ -6,13 +6,13 @@
 /*   By: nakebli <nakebli@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/14 10:27:03 by nakebli           #+#    #+#             */
-/*   Updated: 2022/10/20 10:17:04 by nakebli          ###   ########.fr       */
+/*   Updated: 2022/10/24 10:55:46 by nakebli          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	is_negative(long *n)
+static int	is_negative(long *n)
 {
 	if (*n < 0)
 	{
@@ -22,7 +22,7 @@ int	is_negative(long *n)
 	return (0);
 }
 
-int	ft_count_len(long n)
+static int	ft_count_len(long n)
 {
 	int	i;
 
@@ -62,10 +62,3 @@ char	*ft_itoa(int n)
 		str[0] = '-';
 	return (str);
 }
-
-// int main ()
-// {
-// 	char *s = ft_itoa(123);
-
-// 	printf("|%s|\n",s);
-// }

@@ -6,7 +6,7 @@
 /*   By: nakebli <nakebli@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/09 02:47:02 by nakebli           #+#    #+#             */
-/*   Updated: 2022/10/20 12:25:07 by nakebli          ###   ########.fr       */
+/*   Updated: 2022/10/24 11:01:25 by nakebli          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,22 +34,3 @@ size_t	ft_strlcat(char *dst, const char *src, size_t size)
 		return (ft_strlen((char *)src) + size);
 	return (ft_strlen((char *)src) + len_dst);
 }
-
-// int main()
-// {
-// 	char s1[8] = "hello";
-// 	char s2[] = "blok";
-// 	size_t i = 8;
-
-// 	size_t e = ft_strlcat(s1, s2, i);
-// 	printf("%zu\n",e);
-// 	printf("%s\n",s1);
-
-// 	char s3[8] = "hello";
-// 	char s4[] = "blok";
-// 	size_t j = 8;
-
-// 	size_t f = ft_strlcat(s3, s4, j);
-// 	printf("%zu\n",f);
-// 	printf("%s\n",s3);
-// }

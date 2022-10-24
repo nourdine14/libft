@@ -6,7 +6,7 @@
 /*   By: nakebli <nakebli@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/14 09:51:02 by nakebli           #+#    #+#             */
-/*   Updated: 2022/10/21 18:30:01 by nakebli          ###   ########.fr       */
+/*   Updated: 2022/10/24 11:02:07 by nakebli          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,10 +36,3 @@ char	*ft_strtrim(char const *s1, char const *set)
 	ft_strlcpy(s, (char *)s1 + i, j - i + 2);
 	return (s);
 }
-
-// int main ()
-// {
-// 	char *s;
-// 	printf("|%s|\n",s = ft_strtrim("abcdba", "acb"));
-// 	return (0);
-// }

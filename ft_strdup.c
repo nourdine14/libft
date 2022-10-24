@@ -6,7 +6,7 @@
 /*   By: nakebli <nakebli@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/11 09:57:56 by nakebli           #+#    #+#             */
-/*   Updated: 2022/10/16 23:58:36 by nakebli          ###   ########.fr       */
+/*   Updated: 2022/10/24 10:59:50 by nakebli          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,11 +28,3 @@ char	*ft_strdup(const char *s1)
 	s2[i] = '\0';
 	return (s2);
 }
-
-// int main ()
-// {
-// 	const char *s1 = "hello world";
-// 	char *s2 = ft_strdup(s1);
-
-// 	printf("%s",s2);
-// }

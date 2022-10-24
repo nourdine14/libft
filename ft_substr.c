@@ -6,7 +6,7 @@
 /*   By: nakebli <nakebli@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/13 21:15:35 by nakebli           #+#    #+#             */
-/*   Updated: 2022/10/20 12:11:40 by nakebli          ###   ########.fr       */
+/*   Updated: 2022/10/24 11:02:12 by nakebli          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,9 +20,11 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	size_t	sz;
 
 	substr = NULL;
-	sz = ft_strlen((char *)s);
+	sz = 0;
+	if (s)
+		sz = ft_strlen((char *)s);
 	if (s == NULL)
-		return (NULL);
+		return (ft_strdup(""));
 	if (start + len <= sz)
 		substr = malloc(sizeof(char) * (len + 1));
 	else if (start < sz && start + len > sz)
@@ -38,10 +40,3 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	substr[i] = '\0';
 	return (substr);
 }
-
-// int main ()
-// {
-// 	printf("x");
-// 	char *s = "1";
-// 	printf("|%s|\n",ft_substr(s, 42, 42000)); 
-// }

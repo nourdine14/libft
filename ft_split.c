@@ -6,7 +6,7 @@
 /*   By: nakebli <nakebli@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/18 10:36:11 by nakebli           #+#    #+#             */
-/*   Updated: 2022/10/20 09:48:30 by nakebli          ###   ########.fr       */
+/*   Updated: 2022/10/24 10:59:21 by nakebli          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,7 +43,7 @@ static int	ft_wordlen(const char *s, char c)
 	return (len);
 }
 
-void	ft_free2d(char **str)
+static void	ft_free2d(char **str)
 {
 	int	i;
 

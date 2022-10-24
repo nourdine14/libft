@@ -6,7 +6,7 @@
 /*   By: nakebli <nakebli@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/11 05:29:21 by nakebli           #+#    #+#             */
-/*   Updated: 2022/10/18 08:12:30 by nakebli          ###   ########.fr       */
+/*   Updated: 2022/10/24 10:58:19 by nakebli          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,12 +27,3 @@ int	ft_memcmp( const void *p1, const void *p2, size_t size )
 		i++;
 	return (s1[i] - s2[i]);
 }
-
-// int main() {
-
-//     int array1 [] = {-128, 0, 127, 0};
-//     int array2 [] = {0, 0, 127, 0};
-//     int exitstatus = ft_memcmp(array1, array2, 0);
-// 	printf("%d",exitstatus);
-//     return 0;
-// }

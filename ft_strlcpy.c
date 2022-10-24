@@ -6,7 +6,7 @@
 /*   By: nakebli <nakebli@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/06 20:38:09 by nakebli           #+#    #+#             */
-/*   Updated: 2022/10/17 00:16:33 by nakebli          ###   ########.fr       */
+/*   Updated: 2022/10/24 11:01:32 by nakebli          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,13 +30,3 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t size)
 	}
 	return (ft_strlen((char *)src));
 }
-
-// int main ()
-// {
-//     char s1[10] = "hello wor";
-//     char s2[20] = "kkkkkkkkkkkkk";
-//     size_t b = ft_strlcpy(s2, s1, 20);
-//     printf("s1 = %s\n" ,s1);
-//     printf("s2 = %s\n" ,s2);
-//     printf("b = %zu\n" ,b);
-// }

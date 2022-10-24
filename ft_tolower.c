@@ -6,7 +6,7 @@
 /*   By: nakebli <nakebli@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/10 09:24:21 by nakebli           #+#    #+#             */
-/*   Updated: 2022/10/17 01:37:53 by nakebli          ###   ########.fr       */
+/*   Updated: 2022/10/24 11:02:17 by nakebli          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,10 +18,3 @@ int	ft_tolower( int character )
 		character = character + 32;
 	return (character);
 }
-
-// int main ()
-// {
-//     int a = 'J';
-//     char c = (char)tolower(a);
-//     printf("%c",c);
-// }

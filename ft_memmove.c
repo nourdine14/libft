@@ -6,7 +6,7 @@
 /*   By: nakebli <nakebli@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/09 16:23:49 by nakebli           #+#    #+#             */
-/*   Updated: 2022/10/20 10:20:14 by nakebli          ###   ########.fr       */
+/*   Updated: 2022/10/24 10:58:32 by nakebli          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,11 +39,3 @@ void	*ft_memmove( void *dest, const void *src, size_t n)
 	}
 	return (d);
 }
-
-// int main ()
-// {
-//     char d[10] = "111222";
-//     char * k = ft_memmove(d, d + 2, 4);
-//     printf("%s",k);
-//     return 0;
-// }

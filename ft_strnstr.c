@@ -6,7 +6,7 @@
 /*   By: nakebli <nakebli@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/10 10:42:37 by nakebli           #+#    #+#             */
-/*   Updated: 2022/10/17 00:18:49 by nakebli          ###   ########.fr       */
+/*   Updated: 2022/10/24 11:01:50 by nakebli          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,13 +40,3 @@ char	*ft_strnstr(const char *big, const char *little, size_t len)
 	}
 	return (NULL);
 }
-
-// int main ()
-// {
-// 	// char	*s1 = "MZIRIBMZIRIBMZE123";
-// 	// char	*s2 = "MZIRIBMZE";
-// 	// size_t	max = strlen(s2);
-
-// 	printf("%s\n",ft_strnstr(NULL, "fake", 0));
-// 	printf("%s\n",strnstr(NULL, "fake", 0));
-// }

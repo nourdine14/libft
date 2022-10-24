@@ -6,7 +6,7 @@
 /*   By: nakebli <nakebli@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/10 08:53:18 by nakebli           #+#    #+#             */
-/*   Updated: 2022/10/17 01:38:12 by nakebli          ###   ########.fr       */
+/*   Updated: 2022/10/24 11:02:23 by nakebli          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,10 +18,3 @@ int	ft_toupper( int character )
 		character = character - 32;
 	return (character);
 }
-
-// int main ()
-// {
-//     int a = 105;
-//     char c = (char)toupper(a);
-//     printf("%c",c);
-// }

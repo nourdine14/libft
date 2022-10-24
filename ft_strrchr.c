@@ -6,7 +6,7 @@
 /*   By: nakebli <nakebli@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/10 10:05:21 by nakebli           #+#    #+#             */
-/*   Updated: 2022/10/18 08:35:57 by nakebli          ###   ########.fr       */
+/*   Updated: 2022/10/24 11:01:59 by nakebli          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,11 +25,3 @@ char	*ft_strrchr(const char *str, int c)
 	}
 	return (NULL);
 }
-
-// int main ()
-// {
-//     int c = '1';
-//     const char str[10] = "123456789";
-
-//     printf("|%s|",ft_strrchr(str, c));
-// }

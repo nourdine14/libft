@@ -6,7 +6,7 @@
 /*   By: nakebli <nakebli@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/20 21:37:13 by nakebli           #+#    #+#             */
-/*   Updated: 2022/10/21 19:25:52 by nakebli          ###   ########.fr       */
+/*   Updated: 2022/10/24 11:07:00 by nakebli          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,11 +14,11 @@
 
 void	ft_lstadd_back(t_list **lst, t_list *new)
 {
-	t_list *temp;
+	t_list	*temp;
 
-	if(lst)
+	if (lst)
 	{
-		if(!(*lst))
+		if (!(*lst))
 			(*lst) = new;
 		else
 		{
