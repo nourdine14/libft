@@ -6,11 +6,12 @@
 /*   By: nakebli <nakebli@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/16 03:58:17 by nakebli           #+#    #+#             */
-/*   Updated: 2022/10/24 10:58:58 by nakebli          ###   ########.fr       */
+/*   Updated: 2022/10/24 13:41:32 by nakebli          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <fcntl.h>
 
 void	ft_putnbr_fd(int n, int fd)
 {

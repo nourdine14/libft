@@ -6,7 +6,7 @@
 /*   By: nakebli <nakebli@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/14 09:51:02 by nakebli           #+#    #+#             */
-/*   Updated: 2022/10/24 11:02:07 by nakebli          ###   ########.fr       */
+/*   Updated: 2022/10/24 13:19:50 by nakebli          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,9 +24,9 @@ char	*ft_strtrim(char const *s1, char const *set)
 	if (!set)
 		return (ft_strdup(s1));
 	j = ft_strlen((char *)s1) - 1;
-	while (ft_strchr(set, s1[i]))
+	while (ft_strchr(set, s1[i]) && s1[i])
 		i++;
-	while (ft_strchr(set, s1[j]))
+	while (ft_strchr(set, s1[j]) && j > 0)
 		j--;
 	if (i > j)
 		return (ft_strdup(""));

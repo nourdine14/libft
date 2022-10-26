@@ -6,7 +6,7 @@
 /*   By: nakebli <nakebli@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/06 20:39:47 by nakebli           #+#    #+#             */
-/*   Updated: 2022/10/24 11:22:33 by nakebli          ###   ########.fr       */
+/*   Updated: 2022/10/26 11:12:42 by nakebli          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,11 +14,7 @@
 # define LIBFT_H
 
 # include <unistd.h>
-# include <stdio.h>
 # include <stdlib.h>
-# include <string.h>
-# include <ctype.h>
-
 //first part
 int		ft_isalpha(int arg);
 int		ft_isdigit(int arg);

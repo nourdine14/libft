@@ -6,7 +6,7 @@
 /*   By: nakebli <nakebli@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/20 16:10:05 by nakebli           #+#    #+#             */
-/*   Updated: 2022/10/24 11:18:38 by nakebli          ###   ########.fr       */
+/*   Updated: 2022/10/26 11:04:37 by nakebli          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ void	ft_striteri(char *s, void (*f)(unsigned int, char*))
 	i = 0;
 	while (i < len)
 	{
-		f(i, &s[i]);
+		f(i, s + i);
 		i++;
 	}
 }

@@ -6,7 +6,7 @@
 /*   By: nakebli <nakebli@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/13 23:06:21 by nakebli           #+#    #+#             */
-/*   Updated: 2022/10/24 11:03:13 by nakebli          ###   ########.fr       */
+/*   Updated: 2022/10/24 12:32:46 by nakebli          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	tlen = 0;
 	if (!s1 || !s2)
 		return (NULL);
-	if (*s1 && *s2)
+	if (*s1 || *s2)
 		tlen = ft_strlen((char *)s1) + ft_strlen((char *)s2) + 1;
 	js = malloc((int)tlen);
 	if (!js)
