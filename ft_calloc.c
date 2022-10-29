@@ -6,7 +6,7 @@
 /*   By: nakebli <nakebli@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/11 09:44:37 by nakebli           #+#    #+#             */
-/*   Updated: 2022/10/20 12:21:25 by nakebli          ###   ########.fr       */
+/*   Updated: 2022/10/29 13:47:50 by nakebli          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,8 +15,10 @@
 void	*ft_calloc(size_t count, size_t size)
 {
 	void	*p;
+	size_t tst_overflow;
 
-	if (count == 18446744073709551615UL || size == 18446744073709551615UL)
+	tst_overflow = count * size;
+	if (tst_overflow / size != count)
 		return (NULL);
 	p = malloc(count * size);
 	if (!p)

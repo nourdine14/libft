@@ -6,7 +6,7 @@
 /*   By: nakebli <nakebli@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/10 10:05:21 by nakebli           #+#    #+#             */
-/*   Updated: 2022/10/24 11:01:59 by nakebli          ###   ########.fr       */
+/*   Updated: 2022/10/29 12:38:42 by nakebli          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,9 @@ char	*ft_strrchr(const char *str, int c)
 {
 	int	n;
 
-	n = ft_strlen((char *)str);
+	n = 0;
+	if (*str)
+		n = ft_strlen((char *)str);
 	while (n >= 0)
 	{
 		if (*(str + n) == (char)c)

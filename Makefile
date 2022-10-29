@@ -6,7 +6,7 @@
 #    By: nakebli <nakebli@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/10/11 23:42:34 by nakebli           #+#    #+#              #
-#    Updated: 2022/10/21 21:31:50 by nakebli          ###   ########.fr        #
+#    Updated: 2022/10/29 17:25:42 by nakebli          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -85,4 +85,3 @@ fclean:clean
 	$(RM) $(NAME)
 
 re: fclean all
-#.phony ;

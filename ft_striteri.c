@@ -6,7 +6,7 @@
 /*   By: nakebli <nakebli@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/20 16:10:05 by nakebli           #+#    #+#             */
-/*   Updated: 2022/10/26 11:04:37 by nakebli          ###   ########.fr       */
+/*   Updated: 2022/10/29 16:32:58 by nakebli          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,8 @@ void	ft_striteri(char *s, void (*f)(unsigned int, char*))
 	int	len;
 
 	len = 0;
+	if (!f)
+		return ;
 	if (s)
 		len = ft_strlen((char *)s);
 	i = 0;

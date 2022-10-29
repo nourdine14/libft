@@ -6,7 +6,7 @@
 /*   By: nakebli <nakebli@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/13 21:15:35 by nakebli           #+#    #+#             */
-/*   Updated: 2022/10/24 11:02:12 by nakebli          ###   ########.fr       */
+/*   Updated: 2022/10/29 14:36:37 by nakebli          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,10 +21,9 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 
 	substr = NULL;
 	sz = 0;
-	if (s)
-		sz = ft_strlen((char *)s);
 	if (s == NULL)
 		return (ft_strdup(""));
+	sz = ft_strlen((char *)s);
 	if (start + len <= sz)
 		substr = malloc(sizeof(char) * (len + 1));
 	else if (start < sz && start + len > sz)

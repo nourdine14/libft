@@ -6,7 +6,7 @@
 /*   By: nakebli <nakebli@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/21 19:07:59 by nakebli           #+#    #+#             */
-/*   Updated: 2022/10/25 11:50:53 by nakebli          ###   ########.fr       */
+/*   Updated: 2022/10/29 16:57:35 by nakebli          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ void	ft_lstclear(t_list **lst, void (*del)(void*))
 	t_list	*temp;
 
 	temp = 0;
-	if (!lst || !(*lst) || !del)
+	if (!lst || !del)
 		return ;
 	while (*lst)
 	{
@@ -26,4 +26,5 @@ void	ft_lstclear(t_list **lst, void (*del)(void*))
 		(*lst) = (*lst)->next;
 		free(temp);
 	}
+	*lst = NULL;
 }
