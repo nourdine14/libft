@@ -6,12 +6,12 @@
 /*   By: nakebli <nakebli@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/19 18:28:53 by nakebli           #+#    #+#             */
-/*   Updated: 2022/10/29 15:11:05 by nakebli          ###   ########.fr       */
+/*   Updated: 2022/10/29 21:50:52 by nakebli          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
+
 char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
 	int		i;

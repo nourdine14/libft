@@ -6,12 +6,11 @@
 /*   By: nakebli <nakebli@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/21 21:03:28 by nakebli           #+#    #+#             */
-/*   Updated: 2022/10/29 17:58:52 by nakebli          ###   ########.fr       */
+/*   Updated: 2022/10/29 21:53:03 by nakebli          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include<stdio.h>
 
 void	ft_lstiter(t_list *lst, void (*f)(void *))
 {

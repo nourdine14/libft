@@ -6,15 +6,15 @@
 /*   By: nakebli <nakebli@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/06 10:34:58 by nakebli           #+#    #+#             */
-/*   Updated: 2022/10/06 11:22:55 by nakebli          ###   ########.fr       */
+/*   Updated: 2022/10/31 15:40:09 by nakebli          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libft.h"
+
 int	ft_isalpha(int arg)
 {
-	if (arg >= 'A' && arg <= 'Z')
+	if ((arg >= 'A' && arg <= 'Z') || (arg >= 'a' && arg <= 'z'))
 		return (1);
-	if (arg >= 'a' && arg <= 'z')
-		return (2);
 	return (0);
 }

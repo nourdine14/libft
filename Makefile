@@ -6,7 +6,7 @@
 #    By: nakebli <nakebli@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/10/11 23:42:34 by nakebli           #+#    #+#              #
-#    Updated: 2022/10/29 17:25:42 by nakebli          ###   ########.fr        #
+#    Updated: 2022/11/02 14:30:24 by nakebli          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -63,13 +63,15 @@ B_OBJS = $(B_SRCS:.c=.o)
 
 CFLAGS = -Wall -Werror -Wextra
 
+HEADER = libft.h
+
 RM = rm -f
 
 AR = @ar -rcs
 
 all: $(NAME)
 
-$(NAME):$(OBJS)
+$(NAME):$(OBJS) $(HEADER)
 	$(AR) $(NAME) $(OBJS)
 
 %.o: %.c
