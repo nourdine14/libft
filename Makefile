@@ -71,10 +71,10 @@ AR = @ar -rcs
 
 all: $(NAME)
 
-$(NAME):$(OBJS) $(HEADER)
+$(NAME):$(OBJS)
 	$(AR) $(NAME) $(OBJS)
 
-%.o: %.c
+%.o: %.c $(HEADER)
 	gcc $(CFLAGS) -c $< -o $@
 
 bonus : $(B_OBJS) $(OBJS)
