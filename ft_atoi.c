@@ -19,7 +19,7 @@ static int	ft_isoverflow(long long int prev, long long curr)
 	return (1);
 }
 
-int	skip_spaces_get_signe(const char *str, int *signe)
+static int	skip_spaces_get_signe(const char *str, int *signe)
 {
 	int	i;
 
